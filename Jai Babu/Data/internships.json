@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer Intern",
+    "department": "Web Development",
+    "duration": "3 Months",
+    "mode": "Remote",
+    "stipend": "Performance Based",
+    "status": "Open",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Responsive Design"
+    ]
+  },
+
+  {
+    "id": 2,
+    "title": "Backend Developer Intern",
+    "department": "Web Development",
+    "duration": "3 Months",
+    "mode": "Remote",
+    "stipend": "Performance Based",
+    "status": "Open",
+    "skills": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "REST API"
+    ]
+  },
+
+  {
+    "id": 3,
+    "title": "Full Stack Developer Intern",
+    "department": "Software Development",
+    "duration": "4 Months",
+    "mode": "Remote",
+    "stipend": "Performance Based",
+    "status": "Open",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Database"
+    ]
+  },
+
+  {
+    "id": 4,
+    "title": "UI UX Design Intern",
+    "department": "Design",
+    "duration": "2 Months",
+    "mode": "Remote",
+    "stipend": "Performance Based",
+    "status": "Open",
+    "skills": [
+      "Figma",
+      "Adobe XD",
+      "Wireframing",
+      "Prototyping"
+    ]
+  },
+
+  {
+    "id": 5,
+    "title": "Digital Marketing Intern",
+    "department": "Marketing",
+    "duration": "2 Months",
+    "mode": "Remote",
+    "stipend": "Performance Based",
+    "status": "Open",
+    "skills": [
+      "SEO",
+      "Social Media",
+      "Content Writing",
+      "Analytics"
+    ]
+  },
+
+  {
+    "id": 6,
+    "title": "Data Analyst Intern",
+    "department": "Analytics",
+    "duration": "3 Months",
+    "mode": "Remote",
+    "stipend": "Performance Based",
+    "status": "Open",
+    "skills": [
+      "Excel",
+      "SQL",
+      "Power BI",
+      "Python"
+    ]
+  },
+
+  {
+    "id": 7,
+    "title": "Python Developer Intern",
+    "department": "Software Development",
+    "duration": "3 Months",
+    "mode": "Remote",
+    "stipend": "Performance Based",
+    "status": "Open",
+    "skills": [
+      "Python",
+      "Flask",
+      "APIs",
+      "Database"
+    ]
+  },
+
+  {
+    "id": 8,
+    "title": "AI & Machine Learning Intern",
+    "department": "Artificial Intelligence",
+    "duration": "4 Months",
+    "mode": "Remote",
+    "stipend": "Performance Based",
+    "status": "Open",
+    "skills": [
+      "Python",
+      "Machine Learning",
+      "Data Science",
+      "TensorFlow"
+    ]
+  }
+]

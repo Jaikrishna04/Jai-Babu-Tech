@@ -1,0 +1,1057 @@
+/* ==========================
+   JAI BABU TECH
+   GLOBAL STYLES
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+:root{
+
+    --primary:#2563eb;
+    --secondary:#06b6d4;
+
+    --background:#ffffff;
+    --card:#f8fafc;
+
+    --text:#0f172a;
+    --text-light:#475569;
+
+    --shadow:0 10px 25px rgba(0,0,0,0.08);
+
+}
+
+body.dark{
+
+    --background:#020617;
+    --card:#0f172a;
+
+    --text:#f8fafc;
+    --text-light:#cbd5e1;
+
+    --shadow:0 10px 25px rgba(0,0,0,0.4);
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    transition:.3s;
+
+    overflow-x:hidden;
+
+}
+
+img{
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+}
+
+/* ==========================
+   LOADER
+========================== */
+
+#loader{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:var(--background);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.spinner{
+
+    width:60px;
+    height:60px;
+
+    border:6px solid #ddd;
+
+    border-top:6px solid var(--primary);
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+    100%{
+        transform:rotate(360deg);
+    }
+
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    background:rgba(255,255,255,0.85);
+
+    backdrop-filter:blur(15px);
+
+    z-index:1000;
+
+    box-shadow:var(--shadow);
+
+}
+
+body.dark .header{
+
+    background:rgba(2,6,23,0.85);
+
+}
+
+.header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:80px;
+
+}
+
+.logo{
+
+    font-size:1.5rem;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+.nav-links a{
+
+    color:var(--text);
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--primary);
+
+}
+
+.header-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+#themeToggle{
+
+    width:45px;
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:1rem;
+}
+
+#menuBtn{
+
+    display:none;
+
+    width:45px;
+    height:45px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:10px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:1.2rem;
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 20px 80px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(37,99,235,0.12),
+        rgba(6,182,212,0.08)
+    );
+
+}
+
+.hero-content{
+
+    max-width:900px;
+
+}
+
+.hero h1{
+
+    font-size:4rem;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+
+    animation:fadeUp 1s ease;
+
+}
+
+.hero h2{
+
+    font-size:2rem;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.hero p{
+
+    font-size:1.1rem;
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+    animation:fadeUp 1.4s ease;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:14px 30px;
+
+    border-radius:12px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:0.3s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.secondary-btn{
+
+    background:var(--secondary);
+
+}
+
+/* ==========================
+   SECTION COMMON
+========================== */
+
+.section{
+
+    padding:100px 0;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:2.5rem;
+
+    margin-bottom:25px;
+
+    font-weight:700;
+
+}
+
+.section-text{
+
+    text-align:center;
+
+    max-width:800px;
+
+    margin:auto;
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+
+/* ==========================
+   ABOUT STATS
+========================== */
+
+.stats{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.stat-card{
+
+    background:var(--card);
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stat-card h3{
+
+    font-size:2rem;
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    color:var(--text-light);
+
+}
+
+/* ==========================
+   SERVICES
+========================== */
+
+.services-grid{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+.service-card{
+
+    background:var(--card);
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:
+    linear-gradient(
+      90deg,
+      var(--primary),
+      var(--secondary)
+    );
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.service-card h3{
+
+    margin-bottom:15px;
+
+    color:var(--primary);
+
+}
+
+.service-card p{
+
+    color:var(--text-light);
+
+    line-height:1.7;
+
+}
+
+/* ==========================
+   INTERNSHIPS
+========================== */
+
+.internship-grid{
+
+    margin-top:50px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:25px;
+
+}
+
+.internship-card{
+
+    background:var(--card);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.internship-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.internship-card h3{
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.internship-card p{
+
+    color:var(--text-light);
+
+    margin-bottom:10px;
+
+}
+
+.internship-status{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+    background:#22c55e;
+
+    color:white;
+
+    font-size:0.85rem;
+
+    font-weight:600;
+
+}
+
+/* ==========================
+   APPLICATION FORM
+========================== */
+
+#applicationForm{
+
+    max-width:800px;
+
+    margin:40px auto 0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+#applicationForm input,
+#applicationForm textarea,
+#applicationForm select{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border:2px solid transparent;
+
+    border-radius:14px;
+
+    background:var(--card);
+
+    color:var(--text);
+
+    outline:none;
+
+    font-size:1rem;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+#applicationForm textarea{
+
+    resize:vertical;
+
+    min-height:140px;
+
+}
+
+#applicationForm input:focus,
+#applicationForm textarea:focus,
+#applicationForm select:focus{
+
+    border-color:var(--primary);
+
+}
+
+#applicationForm button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+#applicationForm button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+#successMessage{
+
+    margin-top:20px;
+
+    text-align:center;
+
+    font-weight:600;
+
+    color:#22c55e;
+
+}
+
+/* ==========================
+   CONTACT FORM
+========================== */
+
+#contactForm{
+
+    max-width:800px;
+
+    margin:40px auto 0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+#contactForm input,
+#contactForm textarea{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:var(--card);
+
+    color:var(--text);
+
+    outline:none;
+
+    font-size:1rem;
+
+    box-shadow:var(--shadow);
+
+}
+
+#contactForm textarea{
+
+    resize:vertical;
+
+    min-height:180px;
+
+}
+
+#contactForm button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    background:var(--secondary);
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+#contactForm button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    padding:60px 20px;
+
+    text-align:center;
+
+    background:var(--card);
+
+    margin-top:60px;
+
+}
+
+footer h3{
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+footer p{
+
+    color:var(--text-light);
+
+    margin-bottom:10px;
+
+}
+
+/* ==========================
+   ANIMATIONS
+========================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+.fade-up{
+
+    animation:
+    fadeUp .8s ease forwards;
+
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--background);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--secondary);
+
+}
+
+/* ==========================
+   MOBILE MENU
+========================== */
+
+@media(max-width:900px){
+
+    .nav-links{
+
+        position:fixed;
+
+        top:80px;
+
+        right:-100%;
+
+        width:280px;
+
+        height:calc(100vh - 80px);
+
+        background:var(--card);
+
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:flex-start;
+
+        padding-top:40px;
+
+        gap:25px;
+
+        transition:.4s;
+
+        box-shadow:var(--shadow);
+
+    }
+
+    .nav-links.active{
+
+        right:0;
+
+    }
+
+    #menuBtn{
+
+        display:block;
+
+    }
+
+}
+
+/* ==========================
+   TABLETS
+========================== */
+
+@media(max-width:768px){
+
+    .hero h1{
+
+        font-size:3rem;
+
+    }
+
+    .hero h2{
+
+        font-size:1.5rem;
+
+    }
+
+    .section-title{
+
+        font-size:2rem;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+    }
+
+}
+
+/* ==========================
+   SMALL PHONES
+========================== */
+
+@media(max-width:480px){
+
+    .header .container{
+
+        height:70px;
+
+    }
+
+    .logo{
+
+        font-size:1.2rem;
+
+    }
+
+    .hero{
+
+        padding-top:120px;
+
+    }
+
+    .hero h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .hero h2{
+
+        font-size:1.2rem;
+
+    }
+
+    .hero p{
+
+        font-size:.95rem;
+
+    }
+
+    .section{
+
+        padding:70px 0;
+
+    }
+
+    .service-card,
+    .stat-card,
+    .internship-card{
+
+        padding:25px;
+
+    }
+
+    #applicationForm input,
+    #applicationForm textarea,
+    #applicationForm select{
+
+        font-size:.95rem;
+
+    }
+
+}
+
+/* ==========================
+   EXTRA LARGE SCREENS
+========================== */
+
+@media(min-width:1400px){
+
+    .container{
+
+        max-width:1320px;
+
+    }
+
+    .hero h1{
+
+        font-size:5rem;
+
+    }
+
+}
