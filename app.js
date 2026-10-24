@@ -641,3 +641,280 @@ if (yearElement) {
 console.log(
     "Jai Babu Tech Website Loaded Successfully"
 );
+
+/* ==========================
+   CURSOR GLOW
+========================== */
+
+const glow =
+document.getElementById(
+"cursorGlow"
+);
+
+document.addEventListener(
+"mousemove",
+e=>{
+
+glow.style.left=
+e.clientX-150+"px";
+
+glow.style.top=
+e.clientY-150+"px";
+
+}
+);
+
+/* ==========================
+   FLOATING PARTICLES
+========================== */
+
+const particles =
+document.getElementById(
+"particles"
+);
+
+for(let i=0;i<40;i++){
+
+const particle =
+document.createElement(
+"span"
+);
+
+particle.classList.add(
+"particle"
+);
+
+particle.style.left =
+Math.random()*100 + "%";
+
+particle.style.animationDuration =
+(5 + Math.random()*10)
++ "s";
+
+particle.style.animationDelay =
+Math.random()*5 + "s";
+
+particles.appendChild(
+particle
+);
+
+}
+
+/* ==========================
+   TYPING EFFECT
+========================== */
+
+const words = [
+
+"AI Solutions",
+"Website Development",
+"Software Products",
+"Remote Internships",
+"Digital Innovation"
+
+];
+
+let i = 0;
+
+setInterval(()=>{
+
+const typing =
+document.getElementById(
+"typingText"
+);
+
+if(typing){
+
+typing.textContent =
+words[i];
+
+i =
+(i+1)
+%
+words.length;
+
+}
+
+},2000);
+
+/* ==========================
+   SEARCH INTERNSHIP
+========================== */
+
+const search =
+
+document.getElementById(
+"searchInternship"
+);
+
+if(search){
+
+search.addEventListener(
+"input",
+()=>{
+
+const value =
+search.value
+.toLowerCase();
+
+document
+.querySelectorAll(
+".internship-card"
+)
+.forEach(card=>{
+
+card.style.display =
+card.textContent
+.toLowerCase()
+.includes(value)
+? "block"
+: "none";
+
+});
+
+});
+}
+
+/* ==========================
+   COUNTERS
+========================== */
+
+document
+.querySelectorAll(
+".counter"
+)
+.forEach(counter=>{
+
+counter.innerText = "0";
+
+const update = ()=>{
+
+const target =
++counter.dataset.target;
+
+const current =
++counter.innerText;
+
+const increment =
+target/80;
+
+if(current < target){
+
+counter.innerText =
+Math.ceil(
+current +
+increment
+);
+
+requestAnimationFrame(
+update
+);
+
+}
+else{
+
+counter.innerText =
+target + "+";
+
+}
+
+};
+
+update();
+
+});
+
+/* ==========================
+   3D TILT EFFECT
+========================== */
+
+document
+.querySelectorAll(
+".service-card,.stat-card,.internship-card"
+)
+.forEach(card=>{
+
+card.addEventListener(
+"mousemove",
+e=>{
+
+const rect =
+card.getBoundingClientRect();
+
+const x =
+e.clientX -
+rect.left;
+
+const y =
+e.clientY -
+rect.top;
+
+const rotateY =
+(x / rect.width - .5)
+* 20;
+
+const rotateX =
+(y / rect.height - .5)
+* -20;
+
+card.style.transform =
+`
+perspective(1000px)
+rotateX(${rotateX}deg)
+rotateY(${rotateY}deg)
+translateY(-10px)
+`;
+
+});
+
+card.addEventListener(
+"mouseleave",
+()=>{
+
+card.style.transform =
+`
+perspective(1000px)
+rotateX(0deg)
+rotateY(0deg)
+`;
+
+});
+
+});
+
+/* ==========================
+   GSAP HERO ANIMATION
+========================== */
+
+if(typeof gsap !== "undefined"){
+
+gsap.from(
+".hero h1",
+{
+y:100,
+opacity:0,
+duration:1.3
+}
+);
+
+gsap.from(
+".hero h2",
+{
+y:60,
+opacity:0,
+duration:1,
+delay:.5
+}
+);
+
+gsap.from(
+".hero p",
+{
+y:60,
+opacity:0,
+duration:1,
+delay:.8
+}
+);
+
+}
